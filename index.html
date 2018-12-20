@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LAB MONEDAS</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Calentim -->
+    <link rel="stylesheet" type="text/css" href="css/calentim.min.css">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+</head>
+<body>
+
+<!-- Welcome Navigation Bar -->
+<nav id="welcomeNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#customerNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">DIVISAS<span>CONVERTER</span></a>
+        </div>
+    </div>
+</nav>
+<!-- Welcome Navigation Bar -->
+
+<!-- ************************** Welcome Content *************************** -->
+
+<!-- Feature -->
+<section id="feature" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">¡Bienvenido(a)!</h1>
+        </div>
+        <br><br><br><br>
+        <div class="row no-gutters">
+            <div class="col-6 col-md-4">
+                <!-- KEYBOARD -->
+                <div class="row">
+                    <div class="row" id="inputDiv">
+                        <div class="col-md-6">
+                            <label for="fromCurrency">Moneda de Origen: </label>
+                            <select id="fromCurrency" class="form-control input-sm" required></select>
+                            <br>
+                            <input id="inputValue" class="screen text-right" placeholder="Cantidad" readonly>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button id="allClear" type="button" class="btn btn-danger">LIMPIAR</button>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button id="7" type="button" class="btn btn-info" style="margin:5px;">7</button>
+                        <button id="8" type="button" class="btn btn-info" style="margin:5px;">8</button>
+                        <button id="9" type="button" class="btn btn-info" style="margin:5px;">9</button>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button id="4" type="button" class="btn btn-info" style="margin:5px;">4</button>
+                        <button id="5" type="button" class="btn btn-info" style="margin:5px;">5</button>
+                        <button id="6" type="button" class="btn btn-info" style="margin:5px;">6</button>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button id="1" type="button" class="btn btn-info" style="margin:5px;">1</button>
+                        <button id="2" type="button" class="btn btn-info" style="margin:5px;">2</button>
+                        <button id="3" type="button" class="btn btn-info" style="margin:5px;">3</button>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button id="0" type="button" class="btn btn-info" style="margin:5px;">0</button>
+                        <button id="comma" type="button" class="btn btn-info" style="margin:5px;">,</button>
+                        <button id="equals" type="button" class="btn btn-success" style="margin:5px;">CONVERTIR ALEATORIAMENTE</button>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <!-- TABLE -->
+            <div class="col-12 col-sm-6 col-md-8">
+                <input hidden type="text" id="searchCoin" placeholder="Buscar moneda...">
+                <br><br>
+                <div hidden id="results" class="table-responsive">
+                    <table class="table table-striped" id="tblGridCoins">
+                        <thead id="tblHeadCoins">
+                            <tr>
+                                <!--Bandera-->
+                                <th>Código</th>
+                                <th>Moneda</th>
+                                <th>Valor</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblBodyCoins">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<hr>
+<!-- Feature -->
+
+<!-- Complex Footer -->
+<footer id="complexFooter">
+    <div class="row">
+        <div class="col-lg-12 mx-auto text-center">
+            <h2 style="color:black;">
+                LAB MONEDAS
+            </h2>
+            <ul class="list-unstyled">
+                <li>
+                    <i class="fa fa-mobile fa-fw"></i>85635561
+                </li>
+                <li>
+                    <i class="fa fa-envelope-o fa-fw"></i>
+                    <a href="mailto:@">adriangarro81@gmail.com</a>
+                </li>
+            </ul>
+            <br>
+            <hr class="small">
+            <p class="text-muted">Copyright &copy; Elberth Adrián Garro Sánchez 2019</p>
+        </div>
+    </div>
+</footer>
+<!-- Complex Footer -->
+
+<!-- Scripts -->
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Index -->
+<script src="js/index.js"></script>
+<!-- Scripts -->
+
+</body>
+</html>
