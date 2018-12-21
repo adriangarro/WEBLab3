@@ -163,10 +163,20 @@ function controllCalculator() {
             alert("Debe elegir una moneda y establecer un monto a convertir.");
         }
     });
+
+    function searchTable() {
+        $("#searchCoin").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tblBodyCoins tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });
+        });
+    }
 }
 
 jQuery(
     startConfig(),
     setOptionsInFCurrencySelect(),
-    controllCalculator()
+    controllCalculator(),
+    searchTable()
 );
