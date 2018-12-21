@@ -138,7 +138,7 @@ function controllCalculator() {
                         let conversion = $("#fromCurrency").val() + "_" + randKey; // fromCurr_toCurr;
                         // getExchangeRate
                         $.ajax({
-                            url: "http://free.currencyconverterapi.com/api/v5/convert?q=" + conversion + "&compact=y",
+                            url: "https://free.currencyconverterapi.com/api/v5/convert?q=" + conversion + "&compact=y",
                             success: function(exchange_response) {
                                 let value = exchange_response[conversion].val * parseFloat($("#inputValue").val());
                                 let currencyRow = "<tr>"
