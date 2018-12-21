@@ -142,6 +142,7 @@ function controllCalculator() {
                             success: function(exchange_response) {
                                 let value = exchange_response[conversion].val * parseFloat($("#inputValue").val());
                                 let currencyRow = "<tr>"
+                                + "<td>" + "<div class='currency-flag currency-flag-"+ currency.code.toLowerCase() +"'></div>" + "</td>"
                                 + "<td>" + currency.code + "</td>"
                                 + "<td>" + currency.name + "</td>"
                                 + "<td>" + value + "</td>"
@@ -163,15 +164,15 @@ function controllCalculator() {
             alert("Debe elegir una moneda y establecer un monto a convertir.");
         }
     });
+}
 
-    function searchTable() {
-        $("#searchCoin").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#tblBodyCoins tr").filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-            });
+function searchTable() {
+    $("#searchCoin").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#tblBodyCoins tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
         });
-    }
+    });
 }
 
 jQuery(
